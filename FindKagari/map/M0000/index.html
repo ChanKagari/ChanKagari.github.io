@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang = "zh-SG">
+    <head>
+        <title> Find Kagari ~ Find Kagari's address by a picture. </title>
+        <meta name = "description" content = "=HINT= Find Kagari ~ Find Kagari's address by a picture.">
+        <link rel = "canonical" href = "https://chankagari.github.io/FindKagari/">
+        <meta charset = "UTF-8">
+        <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+
+        <style>
+            a {
+                text-decoration: none;
+                color: #0366d6;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div style = "display: block; margin: 0 auto; width: 40%;">
+            <br>
+            <! ******************** 总标题 ******************** >
+
+            <a href = "https://chankagari.github.io/FindKagari/" style = "font-size: 110%;"> <strong> -Hint- Find Kagari ~ Find Kagari's address by a picture. </strong></a>
+            <a href = "javascript: history.back()" style = "font-size: 90%;float:right;"> <strong> 返回上个页面 </strong> </a>
+            <p style = "font-size: 160%"> <strong> M0000 </strong> </p>
+            <div style = "font-size: 1em; border: 1px solid #eaecef;"> </div>
+            
+            <! ******************** 内容 ******************** >
+            
+            <img src = "https://chankagari.github.io/FindKagari/map/M0000/M0000.jpg" alt = "M0000">
+            
+            <div> time: 2020.03 <br> </div>
+            <br>
+            <div>
+                <h4> 提交答案 </h4>
+                输入百度地图全景预览网址中 #panoid= 后的字符串以提交答案. <br>
+                <input type = "text" id = "ans" style = "width: 42%;">
+                <button onclick = "checkans()"> OK </button>
+                <br>
+                <script>
+                    function checkans () {
+                        if (document.getElementById("ans").value == "09002200121902051556492172L") 
+                            alert("Accepted.");
+                        else 
+                            alert("Wrong Answer.");
+                    }
+                </script>
+            </div>
+            <div id = "hink">
+                <h4> 提示 </h4>
+                以汉语拼音方式, 输入图片所在城市以判断你是否找对了大致地点 (请不要滥用这个功能). <br>
+                <input type = "text" id = "city" style = "width: 15%;">
+                <button onclick = "checkhink()"> OK </button>
+                <br>
+                <script>
+                    function checkhink () {
+                        if (document.getElementById("city").value == "Beijing") 
+                            alert("Correct Area.");
+                        else 
+                            alert("Wrong Area.");
+                    }
+                </script>
+            </div>
+            
+            <script>
+                function checkall () {
+                        if (document.getElementById("ans").value == "09002200121902051556492172L") 
+                            alert("Accepted.");
+                        else {
+                            if (document.getElementById("city").value == "Beijing")
+                                alert("Wrong Answer;\nCorrect Area.");
+                            else
+                                alert("Wrong Answer;\nWrong Area.");
+                        }
+                }
+                document.onkeydown = function(e) {
+                    e = e || window.event;
+                    if (e.keyCode == 13) {
+                        checkall();
+                        return false;
+                    }
+                }
+            </script>
+        </div>
+    </body>
+</html>
